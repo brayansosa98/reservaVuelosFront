@@ -1,0 +1,30 @@
+<md-content class="md-padding" layout-xs="column" layout="row">
+  <div flex-xs flex-gt-xs="25" layout="column">
+    <md-card md-theme="default" md-theme-watch>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">RESERVA DE VUELOS</span>
+        </md-card-title-text>
+      </md-card-title>
+      <md-card-content>
+        <form name="userForm">
+          <div layout="row">
+            <md-input-container class="md-block">
+              <label>Usuario</label>
+              <input ng-model="vmSignin.user.username">
+            </md-input-container>
+          </div>
+          <div layout="row">
+            <md-input-container class="md-block">
+              <label>Contraseña</label>
+              <input type="password" ng-model="vmSignin.user.password">
+            </md-input-container>
+          </div>
+        </form>
+      </md-card-content>
+      <md-card-actions layout="row" layout-align="center">
+        <md-button class="md-raised md-primary" ng-click="vmSignin.signin()">INGRESAR</md-button>
+      </md-card-actions>
+    </md-card>
+  </div>
+</md-content>

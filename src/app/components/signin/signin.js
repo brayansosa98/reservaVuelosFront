@@ -19,7 +19,7 @@
     var vm = this;
 
     vm.user = {
-      username: "brayansosa98",
+      username: "brayan_sosa23151@elpoli.edu.co",
       password: "0in2mw"
     };
 

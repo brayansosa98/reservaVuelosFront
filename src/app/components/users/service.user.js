@@ -6,14 +6,23 @@
     .service('serviceUser', serviceUser);
 
   serviceUser.$inject = [
-    'constantMeteor',
     'vbaService'
   ];
-  function serviceUser(cm, vbaService) {
+  function serviceUser(vbaService) {
     this.whoIsLogged = whoIsLogged;
+    this.obtenerTiposDocumento = obtenerTiposDocumento;
+    this.registrarUsuario = registrarUsuario;
 
     function whoIsLogged() {
-      return vbaService.call(cm.methods.users.whoIsLogged);
-    };
+      return vbaService.call('usuarioLogeado');
+    }
+
+    function obtenerTiposDocumento() {
+      return vbaService.call('obtenerTipos');
+    }
+
+    function registrarUsuario(usuario) {
+      return vbaService.call('crearUsuario', usuario);
+    }
   }
 })();

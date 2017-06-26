@@ -21,7 +21,6 @@ angular
     vbaConfigProvider.loginRequiredInCalls(true);
     vbaConfigProvider.loginRequiredInSubscribes(true);
     vbaConfigProvider.stopSubscriptionsOnLogout(true);
-
   }
 ])
 

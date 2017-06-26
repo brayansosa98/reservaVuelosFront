@@ -1,0 +1,73 @@
+<md-content class="md-padding" layout-xs="column" layout="row" layout-align="center">
+  <div flex-xs flex-gt-xs="70" layout="column">
+    <md-card md-theme="default" md-theme-watch>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">Registrarse</span>
+        </md-card-title-text>
+      </md-card-title>
+      <md-card-content>
+        <form name="vmRegUsu.userForm">
+          <div layout-gt-sm="row" class="layout-gt-sm-row">
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Tipo Documento</label>
+              <md-select ng-model="vmRegUsu.user.tipoDocumento" required name="">
+                <md-option ng-repeat="tipo in vmRegUsu.tiposDocumento" value="{{tipo._id}}">
+                  {{tipo.tipo}}
+                </md-option>
+              </md-select>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Documento</label>
+              <input ng-model="vmRegUsu.user.documento" type="number" required name="">
+            </md-input-container>
+          </div>
+          <div layout-gt-sm="row" class="layout-gt-sm-row">
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Primer Nombre</label>
+              <input ng-model="vmRegUsu.user.primernombre" type="text" required name="">
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Segundo Nombre</label>
+              <input ng-model="vmRegUsu.user.segundonombre" type="text">
+            </md-input-container>
+          </div>
+          <div layout-gt-sm="row" class="layout-gt-sm-row">
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Primer Apellido</label>
+              <input ng-model="vmRegUsu.user.primerapellido" type="text" required name="">
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Segundo Apellido</label>
+              <input ng-model="vmRegUsu.user.segundoapellido" type="text">
+            </md-input-container>
+          </div>
+          <div layout-gt-sm="row" class="layout-gt-sm-row">
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Correo Electrónico</label>
+              <input ng-model="vmRegUsu.user.email" type="email" required name="">
+            </md-input-container>
+          </div>
+          <div layout-gt-sm="row" class="layout-gt-sm-row">
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Clave</label>
+              <input type="password" ng-model="vmRegUsu.user.clave" required name="">
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Confirmar Clave</label>
+              <input type="password" ng-model="vmRegUsu.user.confirmarclave" required name="">
+            </md-input-container>
+          </div>
+        </form>
+      </md-card-content>
+      <md-card-actions layout="row" layout-align="center">
+        <md-button class="md-raised md-primary" ng-click="vmRegUsu.registrar()">Registrarse</md-button>
+        <md-button class="md-raised md-primary" ng-click="" ui-sref="signin">Cancelar</md-button>
+      </md-card-actions>
+    </md-card>
+  </div>
+</md-content>

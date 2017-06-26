@@ -8,10 +8,22 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
-    .state('app', {
+    .state('signin', {
       url: '/signin',
       templateUrl: 'app/components/signin/signin.html',
       controller: 'signinCtrl as vmSignin'
+    })
+
+    .state('home', {
+      url: '/',
+      templateUrl: 'app/components/home/home.html',
+      controller: 'homeCtrl as HomeCtrlVm'
+    })
+
+    .state('registrar', {
+      url: '/registrarusuario',
+      templateUrl: 'app/components/users/registrar.usuario.html',
+      controller: 'regUsuCtrl as vmRegUsu'
     })
 
     .state('auth', {
@@ -22,9 +34,9 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     })
 
     .state('auth.home', {
-      url: '/',
-      templateUrl: 'app/components/home/home.html',
-      controller: 'homeCtrl as HomeCtrlVm'
+      url: '/home',
+      templateUrl: 'app/components/home/home.signin.html',
+      controller: '',
     })
     ;
 }

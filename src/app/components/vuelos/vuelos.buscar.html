@@ -1,0 +1,41 @@
+<md-content layout-align="center" ng-controller="bucarVuelosCtrl as vmBuscar">
+  <md-card md-theme="default" md-theme-watch>
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">Vuelos</span>
+      </md-card-title-text>
+    </md-card-title>
+    <md-card-content>
+      <form name="vmRegUsu.userForm">
+        <div layout-gt-sm="row" class="layout-gt-sm-row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Origen</label>
+            <md-select ng-model="vmBuscar.buscar.ciudadOrigen" required>
+              <md-option ng-repeat="ciudad in vmBuscar.ciudadesOrigen" value="{{ciudad._id}}">
+                {{ciudad.nombre}}
+              </md-option>
+            </md-select>
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Destino</label>
+            <md-select ng-model="vmBuscar.buscar.ciudadDestino" required>
+              <md-option ng-repeat="ciudad in vmBuscar.ciudadesOrigen" value="{{ciudad._id}}">
+                {{ciudad.nombre}}
+              </md-option>
+            </md-select>
+          </md-input-container>
+        </div>
+        <div layout-gt-sm="row" class="layout-gt-sm-row">
+          <md-input-container class="md-block" flex-gt-sm style="margin: 0">
+            <label>Fecha del viaje</label>
+            <md-datepicker ng-model="vmBuscar.buscar.fecha" aria-label="12"></md-datepicker>
+          </md-input-container>
+        </div>
+      </form>
+      <md-card-actions layout="row" layout-align="center">
+        <md-button class="md-raised md-primary" ng-click="vmBuscar.consultarVuelos()">Buscar</md-button>
+      </md-card-actions>
+    </md-card-content>
+  </md-card>
+</md-content>

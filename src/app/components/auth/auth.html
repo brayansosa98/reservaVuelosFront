@@ -1,8 +1,7 @@
-<!--<div ng-include src="'app/components/auth/auth.sidebar.html'"></div>
-<div layout="column" tabindex="-1" role="main" flex="" class="layout-column flex" style="padding: 10%;">
+<div ng-include src="'app/components/auth/auth.menu.html'"></div>
+<div style="position: absolute; width: 35%">
+  <div ng-include src="'app/components/vuelos/vuelos.buscar.html'"></div>
+</div>
+<div style="position: absolute; margin-left: 36%">
   <div class="main-content" autoscroll="true" ui-view ng-disabled="true"></div>
-</div>-->
-<main>
-  <div ng-include src="'app/components/auth/auth.sidebar.html'"></div>
-  <div class="main-content" autoscroll="true" ui-view ng-disabled="true"></div>
-</main>
+</div>

@@ -38,5 +38,15 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       templateUrl: 'app/components/home/home.signin.html',
       controller: '',
     })
+    .state('auth.vuelos', {
+      url: '/vuelos',
+      templateUrl: 'app/components/vuelos/vuelos.html',
+      controller: 'vuelosCtrl as vmVuelos',
+    })
+    .state('auth.reserva', {
+      url: '/reserva',
+      templateUrl: 'app/components/vuelos/reserva.html',
+      controller: 'reservasCtrl as vmReservas',
+    })
     ;
 }

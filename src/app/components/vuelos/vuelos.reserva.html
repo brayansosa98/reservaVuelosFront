@@ -1,0 +1,124 @@
+<md-content class="md-theme-light" layout-xs="column" layout="row" layout-align="center">
+  <div flex-xs flex-gt-xs="60" layout="column">
+    <md-card md-theme="forest" md-theme-watch>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">Reservar Vuelo</span>
+        </md-card-title-text>
+      </md-card-title>
+      <md-card-content>
+        <form class="form">
+          <div layout-gt-sm="row" class="layout-gt-sm-row">
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Tarjeta</label>
+              <md-select ng-model="vmRegUsu.user.tipoDocumento" required name="">
+                <md-option ng-repeat="tipo in vmRegUsu.tiposDocumento" value="{{tipo._id}}">
+                  {{tipo.tipo}}
+                </md-option>
+              </md-select>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Número de Tarjeta</label>
+              <input ng-model="vmRegUsu.user.documento" type="number" required name="">
+            </md-input-container>
+          </div>
+          <div layout-gt-sm="row" class="layout-gt-sm-row">
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Origen</label>
+              <input ng-model="vmRegUsu.user.primernombre" type="text" disabled="false">
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Destino</label>
+              <md-content class="md-theme-light" layout-xs="column" layout="row" layout-align="center">
+                <div flex-xs flex-gt-xs="60" layout="column">
+                  <md-card md-theme="forest" md-theme-watch>
+                    <md-card-title>
+                      <md-card-title-text>
+                        <span class="md-headline">Reservar Vuelo</span>
+                      </md-card-title-text>
+                    </md-card-title>
+                    <md-card-content>
+                      <form class="form">
+                        <div layout-gt-sm="row" class="layout-gt-sm-row">
+                          <md-input-container class="md-block" flex-gt-sm>
+                            <label>Tarjeta</label>
+                            <md-select ng-model="vmRegUsu.user.tipoDocumento" required name="">
+                              <md-option ng-repeat="tipo in vmRegUsu.tiposDocumento" value="{{tipo._id}}">
+                                {{tipo.tipo}}
+                              </md-option>
+                            </md-select>
+                          </md-input-container>
+
+                          <md-input-container class="md-block" flex-gt-sm>
+                            <label>Número de Tarjeta</label>
+                            <input ng-model="vmRegUsu.user.documento" type="number" required name="">
+                          </md-input-container>
+                        </div>
+                        <div layout-gt-sm="row" class="layout-gt-sm-row">
+                          <md-input-container class="md-block" flex-gt-sm>
+                            <label>Origen</label>
+                            <input ng-model="vmRegUsu.user.primernombre" type="text" disabled="false">
+                          </md-input-container>
+
+                          <md-input-container class="md-block" flex-gt-sm>
+                            <label>Destino</label>
+                            <input ng-model="vmRegUsu.user.segundonombre" type="text">
+                          </md-input-container>
+                        </div>
+                        <div layout-gt-sm="row" class="layout-gt-sm-row">
+                          <md-input-container class="md-block" flex-gt-sm>
+                            <label>Fecha ida</label>
+                            <input ng-model="vmRegUsu.user.primerapellido" type="text" disabled="false">
+                          </md-input-container>
+
+                          <md-input-container class="md-block" flex-gt-sm>
+                            <label>Fecha Regreso</label>
+                            <input ng-model="vmRegUsu.user.segundoapellido" type="text" disabled="false">
+                          </md-input-container>
+                        </div>
+                        <div layout-gt-sm="row" class="layout-gt-sm-row">
+                          <md-input-container class="md-block" flex-gt-sm>
+                            <label>Fecha Límite de Pago</label>
+                            <input ng-model="vmRegUsu.user.email" type="email" disabled="false">
+                          </md-input-container>
+                        </div>
+                      </form>
+                    </md-card-content>
+                    <md-card-actions layout="row" layout-align="center">
+                      <md-button class="md-raised md-primary" ng-click="vmRegUsu.registrar()">Reservar</md-button>
+                      <md-button class="md-raised md-primary" ng-click="" ui-sref="signin">Cancelar</md-button>
+                    </md-card-actions>
+                  </md-card>
+                </div>
+              </md-content>
+              <input ng-model="vmRegUsu.user.segundonombre" type="text">
+            </md-input-container>
+          </div>
+          <div layout-gt-sm="row" class="layout-gt-sm-row">
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Fecha ida</label>
+              <input ng-model="vmRegUsu.user.primerapellido" type="text" disabled="false">
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Fecha Regreso</label>
+              <input ng-model="vmRegUsu.user.segundoapellido" type="text" disabled="false">
+            </md-input-container>
+          </div>
+          <div layout-gt-sm="row" class="layout-gt-sm-row">
+            <md-input-container class="md-block" flex-gt-sm>
+              <label>Fecha Límite de Pago</label>
+              <input ng-model="vmRegUsu.user.email" type="email" disabled="false">
+            </md-input-container>
+          </div>
+        </form>
+      </md-card-content>
+      <md-card-actions layout="row" layout-align="center">
+        <md-button class="md-raised md-primary" ng-click="vmRegUsu.registrar()">Reservar</md-button>
+        <md-button class="md-raised md-primary" ng-click="" ui-sref="signin">Cancelar</md-button>
+      </md-card-actions>
+    </md-card>
+  </div>
+</md-content>

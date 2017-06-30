@@ -1,4 +1,4 @@
-<md-content layout-align="center" ng-controller="bucarVuelosCtrl as vmBuscar">
+<md-content layout-align="center" ng-controller="bucarVuelosCtrl as vmBuscar" style="position: fixed; width: 35%; ">
   <md-card md-theme="default" md-theme-watch>
     <md-card-title>
       <md-card-title-text>
@@ -16,7 +16,6 @@
               </md-option>
             </md-select>
           </md-input-container>
-
           <md-input-container class="md-block" flex-gt-sm>
             <label>Destino</label>
             <md-select ng-model="vmBuscar.buscar.ciudadDestino" required>
@@ -35,6 +34,7 @@
       </form>
       <md-card-actions layout="row" layout-align="center">
         <md-button class="md-raised md-primary" ng-click="vmBuscar.consultarVuelos()">Buscar</md-button>
+        <md-button class="md-raised md-primary" ng-click="vmBuscar.cancelarFiltro()">Cancelar</md-button>
       </md-card-actions>
     </md-card-content>
   </md-card>

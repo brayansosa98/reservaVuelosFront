@@ -1,0 +1,38 @@
+<div style="width: 100%">
+  <md-toolbar class="md-theme-light">
+    <h2 class="md-toolbar-tools">
+      <span>Vuelos Disponibles</span>
+    </h2>
+  </md-toolbar>
+
+  <md-content style="width: 100%">
+    <div ng-if="vmVuelos.factoryVuelos.listVuelos.length === 0">
+      <h2> No hay vuelos disponibles</h2>
+    </div>
+    <md-list>
+      <md-list-item class="md-3-line" ng-repeat="item in vmVuelos.factoryVuelos.listVuelos"  style="border: solid 1px rgba(181, 181, 181, 0.36); margin: 1% 0">
+        <div class="md-list-item-text">
+          <div layout-gt-sm="row" class="layout-gt-sm-row" layout-align="center">
+            <h4>{{item.aerolinea.nombre_comercial}}</h4>
+          </div>
+          <div layout-gt-sm="row" class="layout-gt-sm-row" layout-align="center">
+            <h4>{{item.fecha_salida}}</h4>
+          </div>
+          <div layout-gt-sm="row" class="layout-gt-sm-row" layout-align="center">
+            <h4>{{item.ciudadOrigen.nombre}} - {{item.ciudadDestino.nombre}}</h4>
+          </div>
+          <div layout-gt-sm="row" class="layout-gt-sm-row" layout-align="center">
+            <h4> {{item.hora_salida}} - {{item.hora_salida}}</h4>
+          </div>
+        </div>
+        <md-card-actions layout="row" layout-align="left">
+          <md-button class="md-raised md-primary" ng-click="vmVuelos.reservarVuelo(item)">Reservar</md-button>
+        </md-card-actions>
+        <md-card-actions layout="row" layout-align="left">
+          <md-button class="md-raised md-primary" ng-click="vmRegUsu.registrar()">Comprar</md-button>
+        </md-card-actions>
+
+      </md-list-item>
+    </md-list>
+  </md-content>
+</div>

@@ -19,7 +19,7 @@
                       <md-button ng-click="">Mis Vuelos</md-button>
                     </md-menu-item>
                     <md-menu-item>
-                      <md-button ng-click="">Mis reservas</md-button>
+                      <md-button ui-sref="auth.misreservas">Mis reservas</md-button>
                     </md-menu-item>
                   </md-menu-content>
                 </md-menu>
@@ -29,9 +29,11 @@
               </md-menu-item>
               <md-menu-divider></md-menu-divider>
               <md-menu-item>
-                <md-button ng-click="">Cerrar Sesión</md-button>
+                <md-button ui-sref="signin">Cerrar Sesión</md-button>
               </md-menu-item>
             </md-menu-content>
+            <md-button ui-sref="auth.vuelos">Vuelos</md-button>
+            <md-button ui-sref="auth.misreservas">Mis reservas</md-button>
           </md-menu>
         </md-menu-bar>
       </div>

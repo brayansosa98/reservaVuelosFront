@@ -1,0 +1,42 @@
+<div style="width: 100%">
+  <md-toolbar class="md-theme-light">
+    <h2 class="md-toolbar-tools">
+      <span>Reservas</span>
+    </h2>
+  </md-toolbar>
+
+  <md-content style="width: 100%">
+    <md-list>
+      <md-list-item class="md-3-line" ng-repeat="item in vmReser.reser" style="border: solid 1px rgba(181, 181, 181, 0.36); margin: 1% 0">
+        <div class="md-list-item-text">
+          <div layout-gt-sm="row" class="layout-gt-sm-row" layout-align="center">
+            <h4>{{item.vuelo.aerolinea.nombre_comercial}} - </h4>
+            <h4> {{" " + item.vuelo.fecha_salida}}</h4>
+          </div>
+          <div layout-gt-sm="row" class="layout-gt-sm-row" layout-align="center">
+            <h4>{{item.vuelo.ciudadOrigen.nombre}} ( {{item.vuelo.hora_salida}} ) - {{item.vuelo.ciudadDestino.nombre}} ( {{item.vuelo.hora_salida}})</h4>
+          </div>
+          <md-list>
+            <md-list-item class="md-3-line" ng-repeat="clase in item.reservas" style="border: solid 1px rgba(181, 181, 181, 0.36); margin: 1% 0">
+              
+              <md-content style="width: 100%">
+                <br>
+              <center> <h3>{{clase.clase}}</h3></center>
+                <md-list style="margin-top: 0.5%">
+                  <md-list-item ng-repeat="reser in clase.reservas">
+                    <h4>{{reser._id}}</h4>
+                    <span ng-if="reser.estado===0" style="background-color: orange; margin: 5px; padding: 5px"> Pendiente  </span>
+                    <span ng-if="reser.estado===1" style="background-color: green; margin: 5px; padding: 5px"> Pagada  </span>
+                    <span ng-if="reser.estado===2" style="background-color: red; margin: 5px; padding: 5px"> Cancelada  </span>
+                    <md-button ng-if="reser.estado===0" class="md-raised md-primary" ng-click="vmReser.cancelarReserva(reser._id)">Pagar reservar</md-button>
+                    <md-button ng-if="reser.estado===0" class="md-raised md-primary" ng-click="vmReser.cancelarReserva(reser._id)">Cancelar reservar</md-button>
+                  </md-list-item>
+                </md-list>
+              </md-content>
+            </md-list-item>
+          </md-list>
+        </div>
+      </md-list-item>
+    </md-list>
+  </md-content>
+</div>

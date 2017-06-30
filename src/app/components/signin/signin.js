@@ -25,7 +25,7 @@
 
     function successLogin() {
       serviceUser.whoIsLogged().then(function (loggedUser) {
-          $state.go('auth.home');
+          $state.go('auth.vuelos');
         // if (loggedUser.user && loggedUser.status === 1) {
         // } else if (loggedUser.status === 2) {
         //   console.error('ERROR', 'USUARIO_INACTIVO');

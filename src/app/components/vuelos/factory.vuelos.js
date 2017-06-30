@@ -8,7 +8,8 @@
   factoryVuelos.$inject = [];
   function factoryVuelos() {
     var sharedData = {
-      vueloSelecionado: {}
+      vueloSelecionado: {},
+      listVuelos: []
     };
 
     return sharedData;

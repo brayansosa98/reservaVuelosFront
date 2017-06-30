@@ -44,9 +44,14 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       controller: 'vuelosCtrl as vmVuelos',
     })
     .state('auth.reserva', {
-      url: '/reserva',
-      templateUrl: 'app/components/vuelos/reserva.html',
-      controller: 'reservasCtrl as vmReservas',
+      url: '/reserva/:id',
+      templateUrl: 'app/components/vuelos/vuelos.reserva.html',
+      controller: 'reservaCtrl as vmReserva',
+    })
+    .state('auth.misreservas', {
+      url: '/misReservas',
+      templateUrl: 'app/components/vuelos/vuelos.misreservas.html',
+      controller: 'misReseCtrl as vmReser',
     })
     ;
 }
